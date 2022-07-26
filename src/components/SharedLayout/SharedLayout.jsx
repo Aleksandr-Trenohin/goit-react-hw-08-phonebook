@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 // ? NavLink только для стилизации (если без bootstrap)
-import { Link, NavLink, Outlet } from 'react-router-dom';
+// import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import s from './SharedLayout.module.css';
 import Loader from '../Loader/Loader';
