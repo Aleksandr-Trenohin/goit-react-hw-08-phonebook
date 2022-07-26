@@ -1,14 +1,17 @@
-/* .list {
-  margin-bottom: 13px;
+/* .menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
 }
-.name {
-  text-transform: capitalize;
+
+.email {
+  margin: 0;
 }
+
 .btn {
-  margin-left: 13px;
   border-radius: 5px;
   padding: 3px 7px;
-    border: 1px solid #4985ff;
+  border: 1px solid #4985ff;
 }
 .btn:hover,
 .btn:focus {

@@ -1,5 +1,4 @@
 import { createAction, createReducer } from '@reduxjs/toolkit';
-// import { createReducer } from '@reduxjs/toolkit';
 
 // action
 export const filterList = createAction('filterList');
