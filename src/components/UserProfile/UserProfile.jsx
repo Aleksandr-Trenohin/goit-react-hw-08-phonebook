@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types';
-// import s from './UserProfile.module.css';
+import s from './UserProfile.module.css';
 import { Link } from 'react-router-dom';
 
 import Button from 'react-bootstrap/Button';
@@ -15,12 +15,14 @@ const UserProfile = ({ user }) => {
 
   return (
     <Container>
-      <Row className="justify-content-md-center">
-        <Card style={{ width: '22rem' }} className="text-center">
+      {/* <Row className="justify-content-md-center"> */}
+      <Row className="d-flex justify-content-center">
+        <Card style={{ width: '22rem' }} className={`text-center ${s.card}`}>
           <Card.Img
             variant="top"
             src={defaultImg}
             className="mx-auto rounded-circle"
+            alt="default user image"
           />
           <Card.Body>
             <Card.Title className="mb-3">{name}</Card.Title>

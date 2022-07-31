@@ -23,23 +23,23 @@ const ContactList = ({ contacts, onDelete, onUpdate, isUpdated }) => {
   };
 
   return (
-    <ListGroup variant="flush">
+    <ListGroup variant="flush" className="border-top border-primary ">
       {contacts.map(
         ({ id, name, number }) =>
           name.toLowerCase().indexOf(filter.toLowerCase()) !== -1 && (
             <ListGroup.Item key={id}>
               <ButtonToolbar
-                className="mb-3 justify-content-between"
+                className=" justify-content-between pt-2"
                 aria-label="Toolbar with Button groups"
               >
-                <ListGroup horizontal>
+                <ListGroup horizontal className="mb-2">
                   <ListGroup.Item>
                     <MdOutlineContactPage size="18px" />
                   </ListGroup.Item>
                   <ListGroup.Item>{name}</ListGroup.Item>
                   <ListGroup.Item>{number}</ListGroup.Item>
                 </ListGroup>
-                <ButtonGroup className="me-2" aria-label="First group">
+                <ButtonGroup className=" mb-2" aria-label="First group">
                   <Button
                     variant="outline-warning"
                     type="button"
@@ -70,47 +70,6 @@ const ContactList = ({ contacts, onDelete, onUpdate, isUpdated }) => {
       )}
     </ListGroup>
   );
-
-  // ? vanilla CSS
-  // return (
-  //   <>
-  //     <ul>
-  //       {contacts.map(
-  //         ({ id, name, number }) =>
-  //           name.toLowerCase().indexOf(filter.toLowerCase()) !== -1 && (
-  //             <li key={id} className={s.list}>
-  //               <span className={s.name}>{name}</span>: {number}
-  //               <button
-  //                 type="button"
-  //                 onClick={() => onUpdateClick(id)}
-  //                 // onClick={onUpdateClick}
-  //                 // title={name}
-  //                 className={s.btn}
-  //               >
-  //                 Update
-  //               </button>
-  //               <button
-  //                 type="button"
-  //                 onClick={() => onDelete(id)}
-  //                 // title={name}
-  //                 className={s.btn}
-  //               >
-  //                 Delete
-  //               </button>
-  //               {isClicked && currentId === id && (
-  //                 <UpdateForm
-  //                   onUpdate={onUpdate}
-  //                   isUpdated={isUpdated}
-  //                   setIsClicked={setIsClicked}
-  //                   id={id}
-  //                 />
-  //               )}
-  //             </li>
-  //           )
-  //       )}
-  //     </ul>
-  //   </>
-  // );
 };
 
 ContactList.propTypes = {
